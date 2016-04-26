@@ -43,9 +43,9 @@ class ParamSelectView extends View
       if param == 'Name' && @template.directory
 
         if cfg[param].length > 0
-          nameParam = cfg[param].replace(/\s+/g, '-').toLowerCase()
+          nameParam = cfg[param].replace(/\s+/g, '-')
         else
-          nameParam = @template.name.replace(/\s+/g, '-').toLowerCase()
+          nameParam = @template.name.replace(/\s+/g, '-')
 
     for rule in ((@template.rules?(cfg).items) ? [])
       continue unless rule.destinationFile
@@ -72,18 +72,14 @@ class ParamSelectView extends View
               fs.writeFileSync(fullPathToNewFile, compiledTemplate(cfg) , "utf8")
         catch error
           console.error  "Template processing error: #{error}"
-
-
-
-
-
-
     do @destroy
 
 
   @content: (itemPath, template) ->
     @div class: 'overlay from-top', =>
       @h4 'New files by template: ' + template.name
+
+      console.log(template)
 
       for param in (template.params ? [])
         @label param
@@ -109,7 +105,7 @@ module.exports =
      @focusFilterEditor()
 
    viewForItem: (item) ->
-     "<li>#{item.name}</li>"
+     "<li><h5 style='margin-bottom: 5px;margin-top:5px;'>#{item.name}</h5><div style='color:#999;'>#{item.description}</div></li>"
 
    confirmed: (item) ->
      @cancel()

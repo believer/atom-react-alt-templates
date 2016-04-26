@@ -19,8 +19,8 @@ module.exports = AtomSmartTemplate =
 
     fsPlus.makeTreeSync(@templatesRoot)
 
-    unless fsPlus.existsSync( path.join(@templatesRoot, "BaseTemplate") )
-      fsPlus.copySync( path.join(@assetsRoot, "BaseTemplate"), path.join(@templatesRoot, "BaseTemplate") )
+    unless fsPlus.existsSync( path.join(@templatesRoot, "DumbComponent") )
+      fsPlus.copySync( path.join(@assetsRoot, "DumbComponent"), path.join(@templatesRoot, "DumbComponent") )
 
     @subscriptions = new CompositeDisposable
 
@@ -62,7 +62,6 @@ module.exports = AtomSmartTemplate =
     templates = []
 
     for item in (fs.readdirSync(@templatesRoot))
-
       fullPathToFolder = path.join @templatesRoot, item
       continue unless fsPlus.isDirectorySync(fullPathToFolder)
 

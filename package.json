@@ -1,5 +1,5 @@
 {
-  "name": "atom-smart-template",
+  "name": "atom-react-alt-templates",
   "main": "./lib/atom-smart-template",
   "version": "0.3.1",
   "description": "Files generator by templates for Atom editor",

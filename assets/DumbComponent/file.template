@@ -1,0 +1,8 @@
+import React from 'react'
+import CSSModules from 'react-css-modules'
+import styles from './<%= Name %>.css'
+
+export const <%= Name %> = () =>
+  <div />
+
+export default CSSModules(<%= Name %>, styles)
