@@ -1,6 +1,6 @@
 # atom-react-alt-templates
 
-All credit goes to Alexey Sokolov who made the nice package [atom-smart-template](https://github.com/AlexeySokolov/atom-smart-template), I'm just expanding his great code.
+All credit goes to [Alexey Sokolov](https://github.com/AlexeySokolov) who made the nice package [atom-smart-template](https://github.com/AlexeySokolov/atom-smart-template), I'm just expanding his great code.
 
 This package adds some predefined React templates to the templating engine.
 
