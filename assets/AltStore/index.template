@@ -1,0 +1,18 @@
+import alt from '../alt'
+import <%= Name %>Actions from '../actions/<%= Name %>Actions'
+
+class <%= Name %>Store {
+  constructor () {
+    this.bindListeners({
+      <%= FunctionName %>: <%= Name %>Actions.<%= FunctionName %>
+    })
+
+    this.data = ''
+  }
+
+  <%= FunctionName %> (data) {
+    this.data = data
+  }
+}
+
+export default alt.createStore(<%= Name %>Store, '<%= Name %>Store')

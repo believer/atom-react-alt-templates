@@ -1,0 +1,34 @@
+import chai, { expect } from 'chai'
+import chaiEnzyme from 'chai-enzyme'
+import { shallow } from 'enzyme'
+import React from 'react'
+import <%= Name %>Container from '../<%= Name %>Container'
+
+chai.use(chaiEnzyme())
+
+describe('<%= Name %>Container', () => {
+  let component
+  let instance
+
+  beforeEach(() => {
+    component = shallow(
+      <<%= Name %>Container test="test" />
+    )
+
+    instance = component.instance()
+  })
+
+  it('should render', () => {
+    expect(component.type().name).to.eql('AltContainer')
+  })
+
+  it('should add the correct store', () => {
+    expect(component.prop('store').displayName).to.eql('<%= Store %>Store')
+  })
+
+  it('should render the component with props', () => {
+    const <%= Name %> = component.find('<%= Name %>')
+
+    expect(<%= Name %>).to.have.prop('test', 'test')
+  })
+})

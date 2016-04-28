@@ -2,16 +2,16 @@ import chai, { expect } from 'chai'
 import chaiEnzyme from 'chai-enzyme'
 import { shallow } from 'enzyme'
 import React from 'react'
-import { <%= Name %> } from '../<%= Name %>'
+import { Column } from '../Column'
 
 chai.use(chaiEnzyme())
 
-describe('<%= Name %>', () => {
+describe('Column', () => {
   let component
 
   beforeEach(() => {
     component = shallow(
-      <<%= Name %> />
+      <Column />
     )
   })
 

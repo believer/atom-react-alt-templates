@@ -1,9 +1,9 @@
 
 module.exports = {
 
-  name: 'Dumb component',
+  name: 'Smart component',
 
-  description: 'Functional stateless component',
+  description: 'React ES6 class',
 
   directory: true,
 

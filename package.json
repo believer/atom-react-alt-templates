@@ -1,9 +1,16 @@
 {
   "name": "atom-react-alt-templates",
   "main": "./lib/atom-smart-template",
-  "version": "0.3.1",
-  "description": "Files generator by templates for Atom editor",
+  "version": "0.1.0",
+  "description": "Opionated React templating for Atom",
   "author": "Alexey Sokolov <soka.mail@gmail.com>",
+  "contributors": [
+    {
+      "name": "Rickard Laurin",
+      "email": "rickard.laurin@gmail.com>",
+      "url": "http://willcodefor.beer"
+    }
+  ],
   "keywords": [
     "template"
   ],
@@ -16,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/AlexeySokolov/atom-smart-template"
+    "url": "https://github.com/believer/atom-react-alt-templates"
   },
   "license": "MIT",
   "engines": {

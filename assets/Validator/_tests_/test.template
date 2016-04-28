@@ -1,0 +1,10 @@
+import { expect } from 'chai'
+import <%= Name %>Validator from '../<%= Name %>Validator'
+
+describe('<%= Name %>Validator', () => {
+  it('should return an Error if component is not a string', () => {
+    const error = <%= Name %>Validator()({ test: 1337 }, 'test', '<%= Name %>Comp')
+
+    expect(error.message).to.eql('test in <%= Name %>Comp should be one of type String, is number')
+  })
+})

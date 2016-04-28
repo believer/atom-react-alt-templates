@@ -1,0 +1,15 @@
+import constructError from './constructError'
+
+export default function <%= Name %>Validator(allowedValues) {
+  return function validator (props, propName, componentName) {
+    const propValue = props[propName]
+
+    if (typeof propValue !== 'string') {
+      return new Error(
+        `${propName} in ${componentName} should be one of type String, is ${typeof propValue}`
+      )
+    }
+
+    return null
+  }
+}

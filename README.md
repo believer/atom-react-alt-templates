@@ -1,8 +1,20 @@
 # atom-react-alt-templates
 
-Most credit goes to Alexey Sokolov who made the nice package [atom-smart-template](https://github.com/AlexeySokolov/atom-smart-template).
+All credit goes to Alexey Sokolov who made the nice package [atom-smart-template](https://github.com/AlexeySokolov/atom-smart-template), I'm just expanding his great code.
 
 This package adds some predefined React templates to the templating engine.
 
-* React components with CSS-modules and a test file
-* Alt actions and stores
+**NOTE**: Seems to be incompatible with [Nuclide](http://nuclide.io/) at the moment.
+
+### Alt
+* Action with a test
+* Store with tests
+
+### React
+* Container component with tests
+* Project setup
+* Custom validator
+* Dumb component (aka Functional stateless component)
+* Smart component (ES6 class)
+
+Dumb and smart components come in both a format with and without a wrapping folder. All React templates contain at least one test. Dumb and smart components also include a CSS file.

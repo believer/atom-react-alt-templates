@@ -1,0 +1,9 @@
+import alt from '../alt'
+
+class <%= Name %>Actions {
+  <%= FunctionName %> () {
+    return true
+  }
+}
+
+export default alt.createActions(<%= Name %>Actions)

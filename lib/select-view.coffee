@@ -79,8 +79,6 @@ class ParamSelectView extends View
     @div class: 'overlay from-top', =>
       @h4 'New files by template: ' + template.name
 
-      console.log(template)
-
       for param in (template.params ? [])
         @label param
         @subview param + 'Editor', new TextEditorView(mini: true)

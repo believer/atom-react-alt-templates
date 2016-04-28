@@ -1,0 +1,11 @@
+import React from 'react'
+import AltContainer from 'alt-container'
+import <%= Store %>Store from '../../stores/<%= Store %>Store'
+import <%= Name %> from './<%= Name %>'
+
+const <%= Name %>Container = (props) =>
+  <AltContainer store={<%= Store %>Store}>
+    <<%= Name %> {...props} />
+  </AltContainer>
+
+export default <%= Name %>Container

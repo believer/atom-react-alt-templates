@@ -1,11 +1,11 @@
 
 module.exports = {
 
-  name: 'Dumb component',
+  name: 'Smart component (without folder)',
 
-  description: 'Functional stateless component',
+  description: 'React ES6 class',
 
-  directory: true,
+  directory: false,
 
   params: ['Name'],
 
@@ -14,12 +14,8 @@ module.exports = {
     return({
       items: [
         {
-          destinationFile: 'index.js',
-          sourceTemplateFile: 'index.template'
-        },
-        {
           destinationFile: config.Name + '.js',
-          sourceTemplateFile: 'file.template'
+          sourceTemplateFile: 'index.template'
         },
         {
           destinationFile: config.Name + '.css',

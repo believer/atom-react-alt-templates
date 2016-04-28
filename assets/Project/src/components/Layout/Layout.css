@@ -1,0 +1,13 @@
+/* ==================================================================
+   Layout
+   ================================================================== */
+
+@import "styles/colors";
+@import "styles/sizes";
+
+/* Composes
+--------------------------------------------------*/
+.bold { composes: proxima-bold from '../../styles/typography.css'; }
+.textCenter { composes: center from '../../styles/typography.css'; }
+.center { composes: center from '../../styles/grid.css'; }
+.middle { composes: middle from '../../styles/grid.css'; }

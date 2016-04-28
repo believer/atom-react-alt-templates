@@ -8,11 +8,14 @@ chai.use(chaiEnzyme())
 
 describe('<%= Name %>', () => {
   let component
+  let instance
 
   beforeEach(() => {
     component = shallow(
       <<%= Name %> />
     )
+
+    instance = component.instance()
   })
 
   it('should render', () => {

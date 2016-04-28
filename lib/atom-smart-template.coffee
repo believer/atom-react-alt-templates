@@ -19,8 +19,32 @@ module.exports = AtomSmartTemplate =
 
     fsPlus.makeTreeSync(@templatesRoot)
 
+    unless fsPlus.existsSync( path.join(@templatesRoot, "AltActions") )
+      fsPlus.copySync( path.join(@assetsRoot, "AltActions"), path.join(@templatesRoot, "AltActions") )
+
+    unless fsPlus.existsSync( path.join(@templatesRoot, "AltStore") )
+      fsPlus.copySync( path.join(@assetsRoot, "AltStore"), path.join(@templatesRoot, "AltStore") )
+
+    unless fsPlus.existsSync( path.join(@templatesRoot, "ContainerComponent") )
+      fsPlus.copySync( path.join(@assetsRoot, "ContainerComponent"), path.join(@templatesRoot, "ContainerComponent") )
+
     unless fsPlus.existsSync( path.join(@templatesRoot, "DumbComponent") )
       fsPlus.copySync( path.join(@assetsRoot, "DumbComponent"), path.join(@templatesRoot, "DumbComponent") )
+
+    unless fsPlus.existsSync( path.join(@templatesRoot, "DumbComponentWithoutFolder") )
+      fsPlus.copySync( path.join(@assetsRoot, "DumbComponentWithoutFolder"), path.join(@templatesRoot, "DumbComponentWithoutFolder") )
+
+    unless fsPlus.existsSync( path.join(@templatesRoot, "Project") )
+      fsPlus.copySync( path.join(@assetsRoot, "Project"), path.join(@templatesRoot, "Project") )
+
+    unless fsPlus.existsSync( path.join(@templatesRoot, "SmartComponent") )
+      fsPlus.copySync( path.join(@assetsRoot, "SmartComponent"), path.join(@templatesRoot, "SmartComponent") )
+
+    unless fsPlus.existsSync( path.join(@templatesRoot, "SmartComponentWithoutFolder") )
+      fsPlus.copySync( path.join(@assetsRoot, "SmartComponentWithoutFolder"), path.join(@templatesRoot, "SmartComponentWithoutFolder") )
+
+    unless fsPlus.existsSync( path.join(@templatesRoot, "Validator") )
+      fsPlus.copySync( path.join(@assetsRoot, "Validator"), path.join(@templatesRoot, "Validator") )  
 
     @subscriptions = new CompositeDisposable
 
@@ -81,7 +105,5 @@ module.exports = AtomSmartTemplate =
     return templates
 
   createFilesFromTemplate: (e) ->
-
-    itemPath = e.currentTarget?.getPath?() ? target.getModel?().getPath()
-
+    itemPath = e.currentTarget.getPath?()
     selectView = new SelectView(itemPath, @scanTemplatesFolder())

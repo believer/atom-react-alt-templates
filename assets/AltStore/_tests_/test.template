@@ -1,0 +1,40 @@
+import { expect } from 'chai'
+import alt from '../../alt'
+import <%= Name %>Actions from '../../actions/<%= Name %>Actions'
+import <%= Name %>Store from '../<%= Name %>Store'
+import Dispatch from './Dispatch'
+
+function getState (prop) {
+  return <%= Name %>Store.getState()[prop]
+}
+
+describe('<%= Name %>Store', () => {
+  let dispatch
+
+  beforeEach(() => {
+    alt.recycle('<%= Name %>Store')
+    dispatch = new Dispatch(<%= Name %>Actions)
+  })
+
+  it('should instantiate', () => {
+    expect(<%= Name %>Store).to.be.an('object')
+  })
+
+  it('should set up listeners', () => {
+    expect(<%= Name %>Store.boundListeners).to.eql([
+      '<%= Name %>Actions.<%= FunctionName %>'
+    ])
+  })
+
+  it('should set intial state', () => {
+    expect(getState('data')).to.eql('')
+  })
+
+  describe('#<%= FunctionName %>', () => {
+    it('should set data', () => {
+      dispatch.send('<%= FunctionName %>', 'test')
+
+      expect(getState('data')).to.eql('test')
+    })
+  })
+})
