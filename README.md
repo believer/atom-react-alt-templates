@@ -6,6 +6,9 @@ This package adds some predefined React templates to the templating engine.
 
 **NOTE**: Seems to be incompatible with [Nuclide](http://nuclide.io/) at the moment.
 
+### Usage
+Right click the folder where you want to add files and select **Create files from template**
+
 ### Alt
 * Action with a test
 * Store with tests
