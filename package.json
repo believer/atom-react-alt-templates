@@ -1,7 +1,7 @@
 {
   "name": "atom-react-alt-templates",
   "main": "./lib/atom-smart-template",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Opionated React templating for Atom",
   "author": "Alexey Sokolov <soka.mail@gmail.com>",
   "contributors": [
