@@ -14,6 +14,7 @@ gulp.task('mocha', function() {
 
   return gulp
     .src([
+      './src/specHelper.js',
       './src/**/_tests_/*.spec.js'
     ])
     .pipe(mocha({

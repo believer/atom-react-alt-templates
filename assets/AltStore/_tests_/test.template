@@ -1,4 +1,3 @@
-import { expect } from 'chai'
 import alt from '../../alt'
 import <%= Name %>Actions from '../../actions/<%= Name %>Actions'
 import <%= Name %>Store from '../<%= Name %>Store'

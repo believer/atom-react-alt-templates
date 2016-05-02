@@ -1,4 +1,3 @@
-import { expect } from 'chai'
 import <%= Name %>Validator from '../<%= Name %>Validator'
 
 describe('<%= Name %>Validator', () => {
