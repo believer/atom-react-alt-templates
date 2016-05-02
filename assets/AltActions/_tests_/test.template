@@ -1,7 +1,5 @@
 import alt from '../../alt'
-import { expect } from 'chai'
 import proxyquire from 'proxyquire'
-import sinon from 'sinon'
 import actionInformation from './actionInformation'
 import <%= Name %>Actions from '../<%= Name %>Actions'
 
